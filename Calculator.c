@@ -14,7 +14,7 @@ do{
     printf("2.Subtraction\n");
     printf("3.Multiplication\n");
     printf("4.Division\n");
-    printf("Exit\n");
+    printf("5.Exit\n");
 
 printf("Enter an Option:");
 scanf("%d",&option);
