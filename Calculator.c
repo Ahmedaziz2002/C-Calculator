@@ -2,11 +2,13 @@
 int main(){
     float num1,num2,result;
     int option;
+
+    printf("\t\tWELCOME TO THE CALCULATOR TERMINAL\n");
 do{
-    printf("Enter the first number:");
+    printf("Enter the first number:\n");
     scanf("%f",&num1);
 
-    printf("Enter the second number:");
+    printf("Enter the second number:\n");
     scanf("%f",&num2);
     
     printf("Choose an option:\n");
@@ -19,24 +21,33 @@ do{
 printf("Enter an Option:");
 scanf("%d",&option);
 
-switch(option){
-case 1:
- printf("Result:%.2f\n\n",num1+num2);
- break;
- case 2:
-  printf("Result:%.2f\n\n",num1-num2);
-  break;
-case 3:
- printf("Result:%.2f\n\n",num1*num2);
- break;
-case 4:
- printf("Result:%.2f\n\n",num1/num2);
- break;
- case 5:
- printf("Exiting the terminal.Thank you\n\n");
- break;
-default:
-printf("Invalid Option!Try again");
+switch (option){
+    case 1:
+    result=num1+num2;
+    printf("Result:%.2f\n\n",result);
+    break;
+    case 2:
+    result=num1-num2;
+    printf("Result:%.2f\n\n",result);
+    break;
+    case 3:
+    result=num1*num2;
+    printf("Result:%.2f\n\n",result);
+    break;
+    case 4:
+    if(num2!=0){
+        result=num1/num2;
+        printf("Result:%.2f\n\n");
+    }
+    else{
+        printf("Error:Division by zero is not possible\n\n");
+    }
+    break;
+    case 5:
+    printf("Exiting the terminal.Thank you\n\n");
+    break;
+    default:
+    printf("Invalid option.Try again.\n\n");
 }
  }
 while (option!=5);
